@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans';
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1084px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 40px 0 20px;
+  background: transparent;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #ffffff;
+}
+
+.nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 66px;
+}
+.nav__main .nav__link {
+  color: #ffffff;
+}
+.nav__info {
+  margin-left: auto;
+}
+.nav__info .nav__link {
+  color: rgba(255, 255, 255, 0.8);
+}
+.nav__link {
+  text-decoration: none;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+.nav__link + .nav__link {
+  margin-left: 30px;
+}
+.nav__link:hover {
+  color: aqua;
+}
+
+.intro {
+  padding-top: 16.5vh;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: linear-gradient(89.85deg, #23196f 0.13%, #180d5b 99.88%);
+  color: rgba(255, 255, 255, 0.8);
+}
+.intro__title {
+  position: relative;
+  width: 542px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+  color: #ffffff;
+  z-index: 1;
+}
+.intro__description {
+  margin-top: 19px;
+  width: 383px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.intro__description span {
+  color: #36a7b9;
+}
+.intro__test {
+  display: block;
+}
+.intro__test::after {
+  content: '';
+  position: absolute;
+  width: 738px;
+  height: 611px;
+  top: -100px;
+  right: -107px;
+  background: url("../img/notebook.png") no-repeat;
+  z-index: 0;
+}
+.intro__btn {
+  position: relative;
+  margin-top: 6.25%;
+  padding: 14px 28px;
+  width: 238px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  border: none;
+  background: #ffffff;
+  color: #0f064c;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.intro__btn:hover {
+  background: aqua;
+}
+.intro__btn:hover .btn-inner {
+  width: 238px;
+}
+.intro .btn-inner {
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  background-color: red;
+  z-index: 10;
+}
+.intro__supbtn {
+  position: relative;
+  margin-top: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 238px;
+}
+.intro__supbtn span {
+  margin-left: 14px;
+}
+.intro__services {
+  margin-top: auto;
+}
+
+.services__title {
+  width: 364px;
+  font-size: 24px;
+  color: #ffffff;
+}
+.services__wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 87px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+.services__item {
+  position: relative;
+  width: 164px;
+  height: 164px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(15, 6, 76, 0.45);
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.services__item path {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.services__item:hover {
+  background: #ffffff;
+}
+.services__item:hover #mailchimp {
+  background-color: #000000;
+}
+.services__item:hover #outlook {
+  background-color: #28a8ea;
+}
+.services__item:hover #gmail .m-liter {
+  fill: #f14336;
+}
+.services__item:hover #gmail .m-liter-r {
+  fill: #d32e2a;
+}
+.services__item:hover #hubspot .hubspt {
+  fill: #33475b;
+}
+.services__item:hover #hubspot .o {
+  fill: #ff7a59;
+}
+.services__item:hover #saleforce .cloud {
+  fill: #00a1e0 !important;
+}
+.services__item:hover #sendgrid .st1 {
+  fill: #aee1f3;
+}
+.services__item:hover #sendgrid .st2 {
+  fill: #263746;
+}
+.services__item:hover #sendgrid .st3 {
+  fill: #2e7bbf;
+}
+.services__item:hover #sendgrid .st4 {
+  fill: #00b3e3;
+}
+
+.ok {
+  stroke-dasharray: 0% 1000%;
+  -webkit-animation: ok-anim 10s infinite;
+          animation: ok-anim 10s infinite;
+}
+.ok-fill {
+  stroke-dasharray: 0% 500%;
+  -webkit-animation: ok2-anim 5s infinite 5s;
+          animation: ok2-anim 5s infinite 5s;
+  fill: transparent;
+}
+
+#mailchimp {
+  width: 164px;
+  height: 82px;
+  background-color: #898feb;
+  -webkit-mask-image: url(../img/mailchimp-icon.svg);
+          mask-image: url(../img/mailchimp-icon.svg);
+}
+
+#outlook {
+  width: 59px;
+  height: 60px;
+  background-color: #898feb;
+  -webkit-mask-image: url(../img/outlook-icon.svg);
+          mask-image: url(../img/outlook-icon.svg);
+}
+
+@-webkit-keyframes ok-anim {
+  from {
+    stroke-dasharray: 0% 1000%;
+  }
+  40% {
+    stroke-dasharray: 1000% 0%;
+  }
+  45% {
+    stroke-dasharray: 10% 10%;
+  }
+}
+
+@keyframes ok-anim {
+  from {
+    stroke-dasharray: 0% 1000%;
+  }
+  40% {
+    stroke-dasharray: 1000% 0%;
+  }
+  45% {
+    stroke-dasharray: 10% 10%;
+  }
+}
+@-webkit-keyframes ok2-anim {
+  from {
+    stroke-dasharray: 0% 500%;
+  }
+  80% {
+    stroke-dasharray: 500% 0%;
+  }
+  90% {
+    fill: #36a7b9;
+  }
+}
+@keyframes ok2-anim {
+  from {
+    stroke-dasharray: 0% 500%;
+  }
+  80% {
+    stroke-dasharray: 500% 0%;
+  }
+  90% {
+    fill: #36a7b9;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans';
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1084px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 40px 0 20px;
+  background: transparent;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #ffffff;
+  }
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  margin-left: 66px;
+
+  &__main {
+    & .nav__link {
+      color: #ffffff;
+    }
+  }
+
+  &__info {
+    margin-left: auto;
+    & .nav__link {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    & + .nav__link {
+      margin-left: 30px;
+    }
+
+    &:hover {
+      color: aqua;
+    }
+
+    transition: color 0.5s ease-in-out;
+  }
+}
+
+.intro {
+  padding-top: 16.5vh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(89.85deg, #23196f 0.13%, #180d5b 99.88%);
+  color: rgba(255, 255, 255, 0.8);
+
+  // &__inner {
+  //    margin-top: 9.4%;
+  // }
+
+  &__title {
+    position: relative;
+    width: 542px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 62px;
+    color: #ffffff;
+    z-index: 1;
+  }
+
+  &__description {
+    margin-top: 19px;
+    width: 383px;
+    font-size: 18px;
+    line-height: 24px;
+
+    & span {
+      color: #36a7b9;
+    }
+  }
+
+  &__test {
+    display: block;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 738px;
+      height: 611px;
+      top: -100px;
+      right: -107px;
+      background: url('../img/notebook.png') no-repeat;
+      z-index: 0;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    margin-top: 6.25%;
+    padding: 14px 28px;
+    width: 238px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    border: none;
+    background: #ffffff;
+    color: #0f064c;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: aqua;
+
+      & .btn-inner {
+        width: 238px;
+      }
+    }
+  }
+
+  .btn-inner {
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index: 10;
+  }
+  &__supbtn {
+    position: relative;
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 238px;
+
+    & span {
+      margin-left: 14px;
+    }
+  }
+
+  &__services {
+    margin-top: auto;
+  }
+}
+
+.services {
+  &__title {
+    width: 364px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  &__wraper {
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 87px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    width: 164px;
+    height: 164px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(15, 6, 76, 0.45);
+    cursor: pointer;
+    transition: all 0.3s linear;
+    & path {
+      transition: all 0.3s linear;
+    }
+    &:hover {
+      background: #ffffff;
+
+      & #mailchimp {
+        background-color: #000000;
+      }
+
+      & #outlook {
+        background-color: #28a8ea;
+      }
+
+      & #gmail {
+        & .m-liter {
+          fill: #f14336;
+        }
+
+        & .m-liter-r {
+          fill: #d32e2a;
+        }
+      }
+
+      & #hubspot {
+        & .hubspt {
+          fill: #33475b;
+        }
+        & .o {
+          fill: #ff7a59;
+        }
+      }
+
+      & #saleforce .cloud {
+        fill: #00a1e0 !important;
+      }
+
+      & #sendgrid {
+        & .st1 {
+          fill: #aee1f3;
+        }
+        & .st2 {
+          fill: #263746;
+        }
+        & .st3 {
+          fill: #2e7bbf;
+        }
+        & .st4 {
+          fill: #00b3e3;
+        }
+      }
+    }
+  }
+}
+
+.ok {
+  // stroke-dashoffset: 4;
+  stroke-dasharray: 0% 1000%;
+  // stroke-dasharray: 100% 0%;
+  animation: ok-anim 10s infinite;
+
+  &-fill {
+    stroke-dasharray: 0% 500%;
+    animation: ok2-anim 5s infinite 5s;
+    fill: transparent;
+  }
+}
+
+#mailchimp {
+  width: 164px;
+  height: 82px;
+  background-color: #898feb;
+  mask-image: url(../img/mailchimp-icon.svg);
+}
+
+#outlook {
+  width: 59px;
+  height: 60px;
+  background-color: #898feb;
+  mask-image: url(../img/outlook-icon.svg);
+}
+
+@keyframes ok-anim {
+  from {
+    stroke-dasharray: 0% 1000%;
+  }
+  40% {
+    stroke-dasharray: 1000% 0%;
+  }
+  45% {
+    stroke-dasharray: 10% 10%;
+    // stroke-dashoffset: 16px;
+  }
+}
+
+@keyframes ok2-anim {
+  from {
+    stroke-dasharray: 0% 500%;
+  }
+  80% {
+    stroke-dasharray: 500% 0%;
+  }
+  90% {
+    // stroke-dasharray: 500% 0%;
+    fill: #36a7b9;
+  }
+}
