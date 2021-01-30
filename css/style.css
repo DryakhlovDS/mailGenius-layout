@@ -118,17 +118,26 @@
   line-height: 24px;
   font-weight: 700;
   border: none;
-  background: #ffffff;
-  color: #0f064c;
+  background: transparent;
+  color: #ffffff;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.intro__btn:hover {
-  background: aqua;
+.intro__btn span {
+  position: relative;
+  top: -46px;
+  left: 28px;
+  -webkit-transition: color 0.2s ease-in 0.5s;
+  transition: color 0.2s ease-in 0.5s;
+  z-index: 0;
 }
-.intro__btn:hover .btn-inner {
-  width: 238px;
+.intro__btn:hover span {
+  color: #180d5b;
+}
+.intro__btn:hover .shape {
+  -webkit-animation: btn-hover 1s linear forwards;
+          animation: btn-hover 1s linear forwards;
 }
 .intro .btn-inner {
   position: absolute;
@@ -233,6 +242,17 @@
   fill: #00b3e3;
 }
 
+.shape {
+  stroke: #ffffff;
+  stroke-dasharray: 50% 120%;
+  stroke-width: 2px;
+  stroke-dashoffset: 25%;
+  fill: transparent;
+  -webkit-animation: border-btn 2s linear infinite;
+          animation: border-btn 2s linear infinite;
+  z-index: 1;
+}
+
 .ok {
   stroke-dasharray: 0% 1000%;
   -webkit-animation: ok-anim 10s infinite;
@@ -304,6 +324,48 @@
   }
   90% {
     fill: #36a7b9;
+  }
+}
+@-webkit-keyframes border-btn {
+  from {
+    stroke-dashoffset: 25%;
+  }
+  to {
+    stroke-dashoffset: 190%;
+  }
+}
+@keyframes border-btn {
+  from {
+    stroke-dashoffset: 25%;
+  }
+  to {
+    stroke-dashoffset: 190%;
+  }
+}
+@-webkit-keyframes btn-hover {
+  0% {
+    stroke-dasharray: 0% 500%;
+  }
+  50% {
+    stroke-dasharray: 500% 0%;
+    fill: transparent;
+  }
+  100% {
+    stroke-dasharray: 500% 0%;
+    fill: #ffffff;
+  }
+}
+@keyframes btn-hover {
+  0% {
+    stroke-dasharray: 0% 500%;
+  }
+  50% {
+    stroke-dasharray: 500% 0%;
+    fill: transparent;
+  }
+  100% {
+    stroke-dasharray: 500% 0%;
+    fill: #ffffff;
   }
 }
 

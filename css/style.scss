@@ -99,6 +99,7 @@
 
   &__test {
     display: block;
+
     &::after {
       content: '';
       position: absolute;
@@ -120,16 +121,26 @@
     line-height: 24px;
     font-weight: 700;
     border: none;
-    background: #ffffff;
-    color: #0f064c;
+    background: transparent;
+    color: #ffffff;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
-    &:hover {
-      background: aqua;
+    & span {
+      position: relative;
+      top: -46px;
+      left: 28px;
+      transition: color 0.2s ease-in 0.5s;
+      z-index: 0;
+    }
 
-      & .btn-inner {
-        width: 238px;
+    &:hover {
+      & span {
+        color: #180d5b;
+      }
+
+      & .shape {
+        animation: btn-hover 1s linear forwards;
       }
     }
   }
@@ -142,6 +153,7 @@
     background-color: red;
     z-index: 10;
   }
+
   &__supbtn {
     position: relative;
     margin-top: 14px;
@@ -240,6 +252,16 @@
   }
 }
 
+.shape {
+  stroke: #ffffff;
+  stroke-dasharray: 50% 120%;
+  stroke-width: 2px;
+  stroke-dashoffset: 25%;
+  fill: transparent;
+  animation: border-btn 2s linear infinite;
+  z-index: 1;
+}
+
 .ok {
   // stroke-dashoffset: 4;
   stroke-dasharray: 0% 1000%;
@@ -290,5 +312,28 @@
   90% {
     // stroke-dasharray: 500% 0%;
     fill: #36a7b9;
+  }
+}
+
+@keyframes border-btn {
+  from {
+    stroke-dashoffset: 25%;
+  }
+  to {
+    stroke-dashoffset: 190%;
+  }
+}
+
+@keyframes btn-hover {
+  0% {
+    stroke-dasharray: 0% 500%;
+  }
+  50% {
+    stroke-dasharray: 500% 0%;
+    fill: transparent;
+  }
+  100% {
+    stroke-dasharray: 500% 0%;
+    fill: #ffffff;
   }
 }
