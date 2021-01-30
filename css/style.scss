@@ -115,8 +115,9 @@
   &__btn {
     position: relative;
     margin-top: 6.25%;
-    padding: 14px 28px;
+    // padding: 14px 28px;
     width: 238px;
+    height: 56px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
@@ -127,8 +128,8 @@
     transition: all 0.3s ease-in-out;
 
     & span {
-      position: relative;
-      top: -46px;
+      position: absolute;
+      top: 14px;
       left: 28px;
       transition: color 0.2s ease-in 0.5s;
       z-index: 0;
